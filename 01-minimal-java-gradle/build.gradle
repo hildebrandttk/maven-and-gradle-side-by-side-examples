@@ -1,0 +1,50 @@
+plugins {
+   id 'java-library'
+   id 'maven-publish'
+}
+
+repositories {
+   mavenLocal()
+   mavenCentral()
+}
+group = 'tk.hildebrandt.gradle'
+version = '1-SNAPSHOT'
+
+publishing {
+   publications {
+      maven(MavenPublication) {
+         from(components.java)
+      }
+   }
+}
+
+//Alternativ
+//compileJava.options.encoding = "UTF-8"
+//compileTestJava.options.encoding = "UTF-8"
+tasks.withType(JavaCompile) {
+   options.encoding = 'UTF-8'
+}
+
+//Alternativ
+//javadoc.options.encoding = "UTF-8"
+tasks.withType(Javadoc) {
+   options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+   systemProperty "file.encoding", "UTF-8"
+}
+
+java {
+   toolchain {
+      languageVersion.set(JavaLanguageVersion.of(17))
+   }
+}
+
+dependencies {
+   testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+}
+
+test {
+   useJUnitPlatform()
+}

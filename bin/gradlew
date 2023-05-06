@@ -1,0 +1,14 @@
+#!/bin/bash
+DIR=$PWD
+
+while [ $DIR != '/' ]; do
+    if [ -x $DIR/gradlew ];then
+	$DIR/gradlew $@
+	exit $?
+    else
+	DIR=$(dirname $DIR)
+    fi
+done
+
+echo "No gradlew in tree"
+exit 1

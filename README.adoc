@@ -1,0 +1,17 @@
+[%header]
+|===
+| Prefix| Description
+|01-minimal|
+| wrapper |
+| Build Cache |
+| 02-multi-module |
+| 03-dependency management |
+| 03-dependency management creating bom | https://blog.mrhaki.com/2023/03/gradle-goodness-publish-version-catalog.html
+| 04-exclusions |
+| 05 Integration Tests |
+| 05.1 Integration Tests result handling |
+| 06 task dependencies / phases | https://stackoverflow.com/a/46028475/12804627
+| 07 assembly |
+| 02-properties |
+| 0x-init| Use setup assistant, to create Project, Templates, pom.xml -> build.gradle, build.gradle -> pom.xml, ...
+|===

@@ -1,0 +1,14 @@
+#!/bin/bash
+DIR=$PWD
+
+while [ $DIR != '/' ]; do
+    if [ -x $DIR/mvnw ];then
+	$DIR/mvnw $@
+	exit $?
+    else
+	DIR=$(dirname $DIR)
+    fi
+done
+
+echo "No mvnw in tree"
+exit 1

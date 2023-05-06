@@ -1,0 +1,27 @@
+<project>
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>tk.hildebrandt.maven.example-04</groupId>
+      <artifactId>parent</artifactId>
+      <version>1-SNAPSHOT</version>
+   </parent>
+   <artifactId>lib</artifactId>
+   <dependencies>
+      <dependency>
+         <groupId>org.junit.jupiter</groupId>
+         <artifactId>junit-jupiter</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>jakarta.persistence</groupId>
+         <artifactId>jakarta.persistence-api</artifactId>
+      </dependency>
+   </dependencies>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+         </plugin>
+      </plugins>
+   </build>
+</project>

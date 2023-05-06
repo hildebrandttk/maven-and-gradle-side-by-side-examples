@@ -1,0 +1,12 @@
+pluginManagement {
+   repositories {
+      maven { url 'https://repo.spring.io/milestone' }
+      gradlePluginPortal()
+   }
+}
+rootProject.name = 'DDD Architecture Examples'
+include('domain-based')
+include('modulith')
+include('hexagonal')
+include('onion')
+include('common')
