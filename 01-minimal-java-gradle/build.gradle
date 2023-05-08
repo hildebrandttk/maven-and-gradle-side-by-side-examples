@@ -33,6 +33,7 @@ tasks.withType(Javadoc) {
 
 tasks.withType(Test) {
    systemProperty "file.encoding", "UTF-8"
+   useJUnitPlatform()
 }
 
 java {
@@ -43,8 +44,4 @@ java {
 
 dependencies {
    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
-}
-
-test {
-   useJUnitPlatform()
 }

@@ -1,0 +1,4 @@
+plugins {
+   id 'init.gradle.java-library-conventions'
+}
+

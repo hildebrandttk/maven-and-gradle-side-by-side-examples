@@ -1,4 +1,4 @@
-package tk.hildebrandt.maven.example;
+package tk.hildebrandt.gradle.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

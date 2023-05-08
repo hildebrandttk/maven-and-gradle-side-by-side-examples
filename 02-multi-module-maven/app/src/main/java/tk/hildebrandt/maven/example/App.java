@@ -1,4 +1,4 @@
-package tk.hildebrandt.maven.example;
+package tk.hildebrandt.gradle.example;
 
 public class App {
 

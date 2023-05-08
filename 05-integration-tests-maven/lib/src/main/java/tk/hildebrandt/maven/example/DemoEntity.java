@@ -1,4 +1,4 @@
-package tk.hildebrandt.maven.example;
+package tk.hildebrandt.gradle.example;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

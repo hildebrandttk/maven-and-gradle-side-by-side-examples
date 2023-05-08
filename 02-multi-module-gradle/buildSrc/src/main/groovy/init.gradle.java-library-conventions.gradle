@@ -1,0 +1,5 @@
+plugins {
+    id 'init.gradle.java-common-conventions'
+
+    id 'java-library'
+}
