@@ -51,7 +51,7 @@
             <scope>import</scope>
          </dependency>
          <!--EXAMPLE 04-MAVEN-01 Option 1: create entry for importing dependency-->
-         <!--         <dependency>-->
+<!--                  <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter</artifactId>-->
 <!--            <version>${spring-boot.version}</version>-->

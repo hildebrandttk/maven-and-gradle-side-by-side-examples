@@ -1,17 +1,18 @@
+= Maven and gradle side-by-side examples
+
+Equivalent statements are marked with *EXAMPLE [\d]-GRADLE-[\d]* and same numbers. Hints ending with \*** are only required by one of both!
+
 [%header]
 |===
 | Prefix| Description
-|01-minimal|
-| wrapper |
-| Build Cache |
-| 02-multi-module |
-| 03-dependency management |
-| 03-dependency management creating bom | https://blog.mrhaki.com/2023/03/gradle-goodness-publish-version-catalog.html
-| 04-exclusions |
-| 05 Integration Tests |
-| 05.1 Integration Tests result handling |
+|00-bin| global command to call current gradle wrapper without fully qualified path.
+|00-gradle-init| Use setup assistant, to create Project, Templates, pom.xml -> build.gradle, build.gradle -> pom.xml, ...
+|01-minimal-*| Minimal setup with wrapper
+| 02-multi-module-* | Multi module setup
+| 03-dependency-management-* | Different types of dependency management
+| 03-dependency management creating bom |
+| 04-exclude-dependency-*** |
+| 05 Integration Tests | Executing integration tests
 | 06 task dependencies / phases | https://stackoverflow.com/a/46028475/12804627
 | 07 assembly |
-| 02-properties |
-| 0x-init| Use setup assistant, to create Project, Templates, pom.xml -> build.gradle, build.gradle -> pom.xml, ...
 |===

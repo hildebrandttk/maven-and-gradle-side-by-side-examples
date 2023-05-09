@@ -32,13 +32,13 @@ subprojects{
       implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
 
       constraints {
-         implementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+         implementation ('org.junit.jupiter:junit-jupiter:5.9.1')
       }
    }
    // EXAMPLE 04-GRADLE-01 Exclude global
-//   configurations {
-//      all {
-//         exclude( group: 'org.springframework.boot', module: 'spring-boot-starter-logging')
-//      }
-//   }
+   configurations {
+      all {
+         exclude( group: 'org.springframework.boot', module: 'spring-boot-starter-logging')
+      }
+   }
 }

@@ -26,23 +26,33 @@
       <dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-data-rest</artifactId>
-         <version>${spring-boot.version}</version>
+<!--         <version>${spring-boot.version}</version>-->
       </dependency>
       <dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-data-jpa</artifactId>
-         <version>${spring-boot.version}</version>
+<!--         <version>${spring-boot.version}</version>-->
       </dependency>
       <dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-test</artifactId>
-         <version>${spring-boot.version}</version>
+<!--         <version>${spring-boot.version}</version>-->
          <scope>test</scope>
       </dependency>
+
       <dependency>
          <groupId>com.h2database</groupId>
          <artifactId>h2</artifactId>
          <version>2.1.214</version>
       </dependency>
    </dependencies>
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <groupId>net.minidev</groupId>
+            <artifactId>json-smart</artifactId>
+            <version>2.4.10</version>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
 </project>
