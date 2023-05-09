@@ -1,15 +1,22 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
+   <!--EXAMPLE 01-MAVEN-02-->
    <groupId>tk.hildebrandt.maven</groupId>
+   <!--EXAMPLE 01-MAVEN-03-->
    <artifactId>01-minimal-java-maven</artifactId>
+   <!--EXAMPLE 01-MAVEN-04-->
    <version>1-SNAPSHOT</version>
    <properties>
+      <!--EXAMPLE 01-MAVEN-05-->
       <maven.compiler.source>17</maven.compiler.source>
       <maven.compiler.target>17</maven.compiler.target>
+      <!--EXAMPLE 01-MAVEN-06-->
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <!--EXAMPLE 01-MAVEN-09-->
       <argLine/>
    </properties>
    <dependencies>
+      <!--EXAMPLE 01-MAVEN-07-->
       <dependency>
          <groupId>org.junit.jupiter</groupId>
          <artifactId>junit-jupiter</artifactId>
@@ -19,11 +26,13 @@
    </dependencies>
    <build>
       <plugins>
+         <!--EXAMPLE 01-MAVEN-08-->
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.0.0</version>
             <configuration>
+               <!--EXAMPLE 01-MAVEN-09-->
                <argLine>@{argLine} -Dfile.encoding=${project.build.sourceEncoding}</argLine>
             </configuration>
          </plugin>

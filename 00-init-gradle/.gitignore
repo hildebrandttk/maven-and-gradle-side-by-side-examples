@@ -5,11 +5,10 @@
 build
 
 # Ignore all generated files
-/00-init-gradle/.gitattributes
-/gradle/
-/app/
-/gradlew.bat
-/gradlew
+.gitattributes
+gradle
+gradlew.bat
+gradlew
 *.gradle
 *.gradle.kts
 *.java

@@ -2,41 +2,16 @@ plugins {
    id 'application'
 }
 
-test{
-   useJUnitPlatform()
-
-   filter {
-      includeTestsMatching "*Test.*"
-   }
+dependencies {
+   module(":lib")
+   implementation('org.springframework.boot:spring-boot-starter-data-rest')
+   implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+   implementation('com.h2database:h2:2.1.214')
+   testImplementation('org.springframework.boot:spring-boot-starter-test')
+   testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
-
-def integrationTestTask = tasks.register('integrationTest', Test) {
-   description = 'Runs integration tests.'
-   group = 'verification'
-
-   shouldRunAfter(tasks.named('test'))
-   filter {
-      includeTestsMatching "*IT.*"
-   }
-   useJUnitPlatform {
-      excludeTags 'slowtest'
-   }
-}
-
-def slowIntegrationTestTask = tasks.register('slowIntegrationTest', Test) {
-   description = 'Runs slow integration tests.'
-   group = 'verification'
-
-   shouldRunAfter(tasks.named('test'))
-   filter {
-      includeTestsMatching "*IT.*"
-   }
-   useJUnitPlatform {
-      includeTags 'slowtest'
-   }
-}
-
+// EXAMPLE 04-GRADLE-01 Option with extra source tree
 def seperatedIntegrationTest = sourceSets.create('seperatedIntegrationTest')
 
 configurations[seperatedIntegrationTest.implementationConfigurationName].extendsFrom(configurations.testImplementation)
@@ -53,17 +28,9 @@ def seperatedIntegrationTestTask = tasks.register('seperatedIntegrationTest', Te
 }
 
 tasks.named('check') {
-   dependsOn(integrationTestTask)
-   dependsOn(slowIntegrationTest)
    dependsOn(seperatedIntegrationTestTask)
 }
 
 dependencies {
-   module(":lib")
-   implementation('org.springframework.boot:spring-boot-starter-data-rest')
-   implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-   implementation('com.h2database:h2:2.1.214')
-   testImplementation('org.springframework.boot:spring-boot-starter-test')
-   testImplementation 'org.junit.jupiter:junit-jupiter'
    seperatedIntegrationTestImplementation project
 }

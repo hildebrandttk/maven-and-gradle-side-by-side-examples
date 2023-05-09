@@ -1,3 +1,4 @@
+// EXAMPLE 02-MAVEN-***
 == Hint
 This is based on https://maven.apache.org/guides/mini/guide-multiple-modules.html[Maven 3.x], maven 4 will bring some https://maven.apache.org/guides/mini/guide-multiple-modules-4.html[improvements].
 

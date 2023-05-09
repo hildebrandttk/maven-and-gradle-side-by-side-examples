@@ -12,6 +12,7 @@
       <argLine/>
    </properties>
    <modules>
+      <!--EXAMPLE 02-MAVEN-01-->
       <module>app</module>
       <module>lib</module>
    </modules>

@@ -1,7 +1,7 @@
 group = 'tk.hildebrandt.gradle'
 version = '1-SNAPSHOT'
 
-subprojects{
+subprojects {
    apply plugin: 'java'
 
    repositories {
@@ -29,9 +29,11 @@ subprojects{
    }
 
    dependencies {
-//      implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
+      // EXAMPLE 03-GRADLE-01 BOM-Import
+      // implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
 
-      constraints{
+      // EXAMPLE 03-GRADLE-02 constraints
+      constraints {
          implementation("org.springframework.boot:spring-boot-starter-data-rest:${springVersion}")
          implementation("org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}")
          testImplementation("org.springframework.boot:spring-boot-starter-test:${springVersion}")

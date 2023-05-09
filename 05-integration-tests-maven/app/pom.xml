@@ -12,11 +12,13 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
          </plugin>
+         <!--EXAMPLE 05-MAVEN-***-->
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
          </plugin>
          <plugin>
+            <!--EXAMPLE 05-MAVEN-***-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <executions>

@@ -30,6 +30,7 @@
       <dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-data-rest</artifactId>
+         <!--EXAMPLE 04-MAVEN-01 Option 2: exclude transient dependency on all importing dependency(mvn version dependent)-->
          <!--         <exclusions>-->
          <!--            <exclusion>-->
          <!--               <groupId>org.springframework.boot</groupId>-->
@@ -40,6 +41,7 @@
       <dependency>
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-data-jpa</artifactId>
+         <!--EXAMPLE 04-MAVEN-01 Option 2: exclude transient dependency on all importing dependency(mvn version dependent)-->
          <!--         <exclusions>-->
          <!--            <exclusion>-->
          <!--               <groupId>org.springframework.boot</groupId>-->
@@ -51,6 +53,7 @@
          <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-starter-test</artifactId>
          <scope>test</scope>
+         <!--EXAMPLE 04-MAVEN-01 Option 2: exclude transient dependency on all importing dependency(mvn version dependent)-->
          <exclusions>
             <exclusion>
                <groupId>org.springframework.boot</groupId>
@@ -58,6 +61,7 @@
             </exclusion>
          </exclusions>
       </dependency>
+      <!--EXAMPLE 04-MAVEN-02 import replacement-->
       <!--      <dependency>-->
       <!--         <groupId>org.springframework.boot</groupId>-->
       <!--         <artifactId>spring-boot-starter-log4j2</artifactId>-->

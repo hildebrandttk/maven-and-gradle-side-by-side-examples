@@ -1,4 +1,5 @@
 #!/bin/bash
+#EXAMPLE 00-MAVEN
 DIR=$PWD
 
 while [ $DIR != '/' ]; do

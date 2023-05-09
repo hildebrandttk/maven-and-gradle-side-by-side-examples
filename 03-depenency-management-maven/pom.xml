@@ -17,6 +17,7 @@
       <module>lib</module>
    </modules>
    <build>
+      <!--EXAMPLE 03-MAVEN-***-->
       <pluginManagement>
          <plugins>
             <plugin>
@@ -32,22 +33,20 @@
    </build>
    <dependencyManagement>
       <dependencies>
+         <!--EXAMPLE 03-MAVEN-***-->
          <dependency>
             <groupId>tk.hildebrandt.maven.example-03</groupId>
             <artifactId>lib</artifactId>
             <version>1-SNAPSHOT</version>
          </dependency>
+         <!--EXAMPLE 03-MAVEN-01-->
          <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.9.2</version>
             <scope>test</scope>
          </dependency>
-         <!--         <dependency>-->
-         <!--            <groupId>jakarta.persistence</groupId>-->
-         <!--            <artifactId>jakarta.persistence-api</artifactId>-->
-         <!--            <version>3.1.0</version>-->
-         <!--         </dependency>-->
+         <!--EXAMPLE 03-MAVEN-02-->
          <!--         <dependency>-->
          <!--            <groupId>org.springframework.boot</groupId>-->
          <!--            <artifactId>spring-boot-dependencies</artifactId>-->

@@ -10,8 +10,10 @@
       <maven.compiler.target>17</maven.compiler.target>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <argLine/>
+      <!--EXAMPLE 05-MAVEN-02-->
       <argLineFailsafe/>
       <spring-boot.version>3.0.6</spring-boot.version>
+      <!--EXAMPLE 05-MAVEN-03-->
       <maven-failsafe-plugin.excludedGroups>slowtest</maven-failsafe-plugin.excludedGroups>
    </properties>
    <modules>
@@ -25,10 +27,10 @@
                <artifactId>maven-surefire-plugin</artifactId>
                <version>3.0.0</version>
                <configuration>
-                  <id>test</id>
                   <argLine>@{argLine} -Dfile.encoding=${project.build.sourceEncoding}</argLine>
                </configuration>
             </plugin>
+            <!--EXAMPLE 05-MAVEN-01-->
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-failsafe-plugin</artifactId>
@@ -41,7 +43,9 @@
                         <goal>verify</goal>
                      </goals>
                      <configuration>
+                        <!--EXAMPLE 05-MAVEN-***-->
                         <argLine>@{argLineFailsafe} -Dfile.encoding=${project.build.sourceEncoding}</argLine>
+                        <!--EXAMPLE 05-MAVEN-02-->
                         <excludedGroups>${maven-failsafe-plugin.excludedGroups}</excludedGroups>
                      </configuration>
                   </execution>
@@ -72,6 +76,7 @@
          </dependency>
       </dependencies>
    </dependencyManagement>
+   <!--EXAMPLE 05-MAVEN-03-->
    <profiles>
       <profile>
          <id>slowTests</id>

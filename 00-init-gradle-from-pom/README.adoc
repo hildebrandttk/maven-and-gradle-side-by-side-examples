@@ -1,0 +1,5 @@
+// EXAMPLE 00-GRADLE
+Migrate a maven project into a gradle (only initial sample, not complete)
+====
+$ gradle init
+====

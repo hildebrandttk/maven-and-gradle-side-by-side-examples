@@ -35,6 +35,7 @@ subprojects{
          implementation 'org.junit.jupiter:junit-jupiter:5.9.1'
       }
    }
+   // EXAMPLE 04-GRADLE-01 Exclude global
 //   configurations {
 //      all {
 //         exclude( group: 'org.springframework.boot', module: 'spring-boot-starter-logging')

@@ -1,5 +1,7 @@
+<!--EXAMPLE 02-MAVEN-02-->
 <project>
    <modelVersion>4.0.0</modelVersion>
+   <!--EXAMPLE 02-MAVEN-03-->
    <parent>
       <groupId>tk.hildebrandt.maven.example-02</groupId>
       <artifactId>parent</artifactId>
