@@ -2,10 +2,10 @@
    <modelVersion>4.0.0</modelVersion>
    <parent>
       <groupId>tk.hildebrandt.maven.example-04</groupId>
-      <artifactId>parent</artifactId>
+      <artifactId>parent-04</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
-   <artifactId>app</artifactId>
+   <artifactId>app-04</artifactId>
    <build>
       <plugins>
          <plugin>
@@ -21,7 +21,7 @@
    <dependencies>
       <dependency>
          <groupId>tk.hildebrandt.maven.example-04</groupId>
-         <artifactId>lib</artifactId>
+         <artifactId>lib-04</artifactId>
       </dependency>
       <dependency>
          <groupId>org.junit.jupiter</groupId>

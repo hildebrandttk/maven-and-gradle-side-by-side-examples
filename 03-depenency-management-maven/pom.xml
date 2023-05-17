@@ -1,7 +1,7 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
    <groupId>tk.hildebrandt.maven.example-03</groupId>
-   <artifactId>parent</artifactId>
+   <artifactId>parent-03</artifactId>
    <name>03-depenency-management-maven</name>
    <version>1-SNAPSHOT</version>
    <packaging>pom</packaging>
@@ -23,7 +23,7 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-plugin</artifactId>
-               <version>3.0.0</version>
+               <version>3.1.0</version>
                <configuration>
                   <argLine>@{argLine} -Dfile.encoding=${project.build.sourceEncoding}</argLine>
                </configuration>
@@ -36,7 +36,7 @@
          <!--EXAMPLE 03-MAVEN-***-->
          <dependency>
             <groupId>tk.hildebrandt.maven.example-03</groupId>
-            <artifactId>lib</artifactId>
+            <artifactId>lib-03</artifactId>
             <version>1-SNAPSHOT</version>
          </dependency>
          <!--EXAMPLE 03-MAVEN-01-->

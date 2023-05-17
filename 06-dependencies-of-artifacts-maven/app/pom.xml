@@ -2,23 +2,26 @@
    <modelVersion>4.0.0</modelVersion>
    <parent>
       <groupId>tk.hildebrandt.maven.example-06</groupId>
-      <artifactId>parent</artifactId>
+      <artifactId>parent-06</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
-   <artifactId>app</artifactId>
+   <artifactId>app-06</artifactId>
    <build>
       <plugins>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.0</version>
          </plugin>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
+            <version>3.1.0</version>
          </plugin>
          <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>3.1.0</version>
             <executions>
                <execution>
                   <goals>
@@ -35,7 +38,7 @@
    <dependencies>
       <dependency>
          <groupId>tk.hildebrandt.maven.example-06</groupId>
-         <artifactId>lib</artifactId>
+         <artifactId>lib-06</artifactId>
       </dependency>
       <dependency>
          <groupId>org.junit.jupiter</groupId>
