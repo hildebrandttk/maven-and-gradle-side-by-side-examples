@@ -30,6 +30,8 @@ subprojects {
 
    dependencies {
       // EXAMPLE 03-GRADLE-01 BOM-Import
+//       implementation(platform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
+// Enforce import and overwrite other definitions
        implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
 
       // EXAMPLE 03-GRADLE-02 constraints
