@@ -1,5 +1,5 @@
 // EXAMPLE 00-GRADLE
-Generate an empty gradle example project with gradle
+Generate an empty gradle example project with gradle.
 ====
 $ gradle init
 ====
