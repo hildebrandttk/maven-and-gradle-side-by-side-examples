@@ -1,7 +1,7 @@
 //EXAMPLE 01-GRADLE-***
 plugins {
-   id 'java-library'
-   id 'maven-publish'
+   id "java-library"
+   id "maven-publish"
 }
 
 //EXAMPLE 01-GRADLE-***
@@ -10,9 +10,9 @@ repositories {
    mavenCentral()
 }
 //EXAMPLE 01-GRADLE-02
-group = 'tk.hildebrandt.gradle'
+group = "tk.hildebrandt.gradle"
 //EXAMPLE 01-GRADLE-04
-version = '1-SNAPSHOT'
+version = "1-SNAPSHOT"
 
 //EXAMPLE 01-GRADLE-***
 publishing {
@@ -34,14 +34,14 @@ java {
 //compileTestJava.options.encoding = "UTF-8"
 //EXAMPLE 01-GRADLE-06
 tasks.withType(JavaCompile) {
-   options.encoding = 'UTF-8'
+   options.encoding = "UTF-8"
 }
 
 //Alternativ
 //javadoc.options.encoding = "UTF-8"
 //EXAMPLE 01-GRADLE-06
 tasks.withType(Javadoc) {
-   options.encoding = 'UTF-8'
+   options.encoding = "UTF-8"
 }
 
 //EXAMPLE 01-GRADLE-07
