@@ -1,36 +1,36 @@
 plugins {
-   id 'application'
+   id("application")
 }
 
 dependencies {
-   implementation project(":lib")
-   implementation('org.springframework.boot:spring-boot-starter-data-rest')
-   implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-   implementation('com.h2database:h2:2.1.214')
-   testImplementation('org.springframework.boot:spring-boot-starter-test')
-   testImplementation 'org.junit.jupiter:junit-jupiter'
+   implementation(project(":lib"))
+   implementation("org.springframework.boot:spring-boot-starter-data-rest")
+   implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+   implementation("com.h2database:h2:2.2.224")
+   testImplementation("org.springframework.boot:spring-boot-starter-test")
+   testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
 // EXAMPLE 04-GRADLE-01 Option with extra source tree
-def seperatedIntegrationTest = sourceSets.create('seperatedIntegrationTest')
+def seperatedIntegrationTest = sourceSets.create("seperatedIntegrationTest")
 
 configurations[seperatedIntegrationTest.implementationConfigurationName].extendsFrom(configurations.testImplementation)
 configurations[seperatedIntegrationTest.runtimeOnlyConfigurationName].extendsFrom(configurations.testRuntimeOnly)
 
-def seperatedIntegrationTestTask = tasks.register('seperatedIntegrationTest', Test) {
-   description = 'Runs integration tests from special directory.'
-   group = 'verification'
+def seperatedIntegrationTestTask = tasks.register("seperatedIntegrationTest", Test) {
+   description = "Runs integration tests from special directory."
+   group = "verification"
 
    testClassesDirs = seperatedIntegrationTest.output.classesDirs
    classpath = configurations[seperatedIntegrationTest.runtimeClasspathConfigurationName] + seperatedIntegrationTest.output
 
-   shouldRunAfter(tasks.named('integrationTest'))
+   shouldRunAfter(tasks.named("integrationTest"))
 }
 
-tasks.named('check') {
+tasks.named("check") {
    dependsOn(seperatedIntegrationTestTask)
 }
 
 dependencies {
-   seperatedIntegrationTestImplementation project
+   seperatedIntegrationTestImplementation(project)
 }

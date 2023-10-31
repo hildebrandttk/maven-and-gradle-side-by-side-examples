@@ -1,8 +1,8 @@
-group = 'tk.hildebrandt.gradle'
-version = '1-SNAPSHOT'
+group = "tk.hildebrandt.gradle"
+version = "1-SNAPSHOT"
 
 subprojects{
-   apply plugin: 'java'
+   apply(plugin: "java")
 
    repositories {
       mavenLocal()
@@ -10,15 +10,15 @@ subprojects{
    }
 
    tasks.withType(JavaCompile) {
-      options.encoding = 'UTF-8'
+      options.encoding = "UTF-8"
    }
 
    tasks.withType(Javadoc) {
-      options.encoding = 'UTF-8'
+      options.encoding = "UTF-8"
    }
 
    tasks.withType(Test) {
-      systemProperty "file.encoding", "UTF-8"
+      systemProperty("file.encoding", "UTF-8")
       useJUnitPlatform()
    }
 
@@ -32,13 +32,13 @@ subprojects{
       implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
 
       constraints {
-         implementation ('org.junit.jupiter:junit-jupiter:5.9.1')
+         implementation("org.junit.jupiter:junit-jupiter:5.9.1")
       }
    }
    // EXAMPLE 04-GRADLE-01 Exclude global
    configurations {
       all {
-         exclude( group: 'org.springframework.boot', module: 'spring-boot-starter-logging')
+         exclude( group: "org.springframework.boot", module: "spring-boot-starter-logging")
       }
    }
 }

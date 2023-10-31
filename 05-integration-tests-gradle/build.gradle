@@ -1,8 +1,8 @@
-group = 'tk.hildebrandt.gradle'
-version = '1-SNAPSHOT'
+group = "tk.hildebrandt.gradle"
+version = "1-SNAPSHOT"
 
-subprojects{
-   apply plugin: 'java'
+subprojects {
+   apply(plugin: "java")
 
    repositories {
       mavenLocal()
@@ -32,53 +32,53 @@ subprojects{
       implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
 
       constraints {
-         implementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+         implementation("org.junit.jupiter:junit-jupiter:5.9.1")
       }
    }
 
-   test{
+   test({
       useJUnitPlatform()
 
       // EXAMPLE 04-GRADLE-*** Filter unit tests by name
       filter {
          includeTestsMatching "*Test.*"
       }
-   }
+   })
 
 // EXAMPLE 04-GRADLE-01
    def integrationTestTask = tasks.register('integrationTest', Test) {
-      description = 'Runs integration tests.'
-      group = 'verification'
+      description = "Runs integration tests."
+      group = "verification"
 
-      shouldRunAfter(tasks.named('test'))
+      shouldRunAfter(tasks.named("test"))
       // EXAMPLE 04-GRADLE-*** Filter integration tests by name
       filter {
          includeTestsMatching "*IT.*"
       }
       useJUnitPlatform {
          // EXAMPLE 04-GRADLE-02
-         excludeTags 'slowtest'
+         excludeTags "slowtest"
       }
    }
 
-   tasks.named('check') {
+   tasks.named("check") {
       dependsOn(integrationTestTask)
    }
 
    def slowIntegrationTestTask = tasks.register('slowIntegrationTest', Test) {
-      description = 'Runs slow integration tests.'
-      group = 'verification'
+      description = "Runs slow integration tests."
+      group = "verification"
 
-      shouldRunAfter(tasks.named('test'))
+      shouldRunAfter(tasks.named("test"))
       useJUnitPlatform {
-         includeTags 'slowtest'
+         includeTags("slowtest")
       }
    }
 
    // EXAMPLE 04-GRADLE-03
-   task withSlowTests (){
-      description = 'Runs all tests plus slow tests'
-      group = 'verification'
+   task withSlowTests() {
+      description = "Runs all tests plus slow tests"
+      group = "verification"
       dependsOn(slowIntegrationTestTask, check)
    }
 }

@@ -1,8 +1,8 @@
 //EXAMPLE 02-GRADLE-***
 plugins {
-    id 'groovy-gradle-plugin'
+   id("groovy-gradle-plugin")
 }
 
 repositories {
-    gradlePluginPortal()
+   gradlePluginPortal()
 }

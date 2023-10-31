@@ -2,7 +2,7 @@ group = "tk.hildebrandt.gradle"
 version = "1-SNAPSHOT"
 
 subprojects {
-   apply plugin: "java"
+   apply(plugin: "java")
 
    repositories {
       mavenLocal()
@@ -18,7 +18,7 @@ subprojects {
    }
 
    tasks.withType(Test) {
-      systemProperty "file.encoding", "UTF-8"
+      systemProperty("file.encoding", "UTF-8")
       useJUnitPlatform()
    }
 
@@ -39,7 +39,7 @@ subprojects {
 //         implementation("org.springframework.boot:spring-boot-starter-data-rest:${springVersion}")
 //         implementation("org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}")
 //         testImplementation("org.springframework.boot:spring-boot-starter-test:${springVersion}")
-//         implementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+//         implementation("org.junit.jupiter:junit-jupiter:5.9.1")
       }
    }
 }

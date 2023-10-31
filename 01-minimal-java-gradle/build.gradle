@@ -33,14 +33,14 @@ java {
 //compileJava.options.encoding = "UTF-8"
 //compileTestJava.options.encoding = "UTF-8"
 //EXAMPLE 01-GRADLE-06
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
    options.encoding = "UTF-8"
 }
 
 //Alternativ
 //javadoc.options.encoding = "UTF-8"
 //EXAMPLE 01-GRADLE-06
-tasks.withType(Javadoc) {
+tasks.withType(Javadoc).configureEach {
    options.encoding = "UTF-8"
 }
 
@@ -49,10 +49,9 @@ dependencies {
    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
    //EXAMPLE 01-GRADLE-09
    systemProperty "file.encoding", "UTF-8"
    //EXAMPLE 01-GRADLE-***
    useJUnitPlatform()
 }
-
