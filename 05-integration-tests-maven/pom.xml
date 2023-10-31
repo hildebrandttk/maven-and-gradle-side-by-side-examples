@@ -1,8 +1,8 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
    <groupId>tk.hildebrandt.maven.example-05</groupId>
-   <artifactId>parent</artifactId>
-   <name>05-exclude-dependency-maven</name>
+   <artifactId>parent-05</artifactId>
+   <name>05-integration-tests-maven</name>
    <version>1-SNAPSHOT</version>
    <packaging>pom</packaging>
    <properties>
@@ -58,7 +58,7 @@
       <dependencies>
          <dependency>
             <groupId>tk.hildebrandt.maven.example-05</groupId>
-            <artifactId>lib</artifactId>
+            <artifactId>lib-05</artifactId>
             <version>1-SNAPSHOT</version>
          </dependency>
          <dependency>

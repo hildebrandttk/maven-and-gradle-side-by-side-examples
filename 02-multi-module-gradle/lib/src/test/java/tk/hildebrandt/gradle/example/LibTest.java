@@ -9,6 +9,6 @@ class LibTest {
 
    @Test
    void exampleTest(){
-      assertEquals("testclass tk.hildebrandt.maven.example.Lib", Lib.calculateName("test"));
+      assertEquals("testclass tk.hildebrandt.gradle.example.Lib", Lib.calculateName("test"));
    }
 }

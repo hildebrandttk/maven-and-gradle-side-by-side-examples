@@ -1,7 +1,7 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
    <groupId>tk.hildebrandt.maven</groupId>
-   <artifactId>01-minimal-java-maven</artifactId>
+   <artifactId>00-minimal-maven-to-gradle</artifactId>
    <version>1-SNAPSHOT</version>
    <properties>
       <maven.compiler.source>17</maven.compiler.source>

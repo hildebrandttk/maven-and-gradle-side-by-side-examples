@@ -4,10 +4,10 @@
    <!--EXAMPLE 02-MAVEN-03-->
    <parent>
       <groupId>tk.hildebrandt.maven.example-02</groupId>
-      <artifactId>parent</artifactId>
+      <artifactId>parent-02</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
-   <artifactId>app</artifactId>
+   <artifactId>app-02</artifactId>
    <build>
       <plugins>
          <plugin>
@@ -23,7 +23,7 @@
    <dependencies>
       <dependency>
          <groupId>tk.hildebrandt.maven.example-02</groupId>
-         <artifactId>lib</artifactId>
+         <artifactId>lib-02</artifactId>
          <version>${project.version}</version>
       </dependency>
       <dependency>

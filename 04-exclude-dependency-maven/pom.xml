@@ -1,7 +1,7 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
    <groupId>tk.hildebrandt.maven.example-04</groupId>
-   <artifactId>parent</artifactId>
+   <artifactId>parent-04</artifactId>
    <name>04-exclude-dependency-maven</name>
    <version>1-SNAPSHOT</version>
    <packaging>pom</packaging>
@@ -34,7 +34,7 @@
       <dependencies>
          <dependency>
             <groupId>tk.hildebrandt.maven.example-04</groupId>
-            <artifactId>lib</artifactId>
+            <artifactId>lib-04</artifactId>
             <version>1-SNAPSHOT</version>
          </dependency>
          <dependency>
