@@ -1,3 +1,0 @@
-rootProject.name = '03-depenency-management-gradle'
-include 'app'
-include 'lib'

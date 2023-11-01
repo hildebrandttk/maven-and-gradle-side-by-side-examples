@@ -2,10 +2,10 @@
    <modelVersion>4.0.0</modelVersion>
    <parent>
       <groupId>tk.hildebrandt.maven.example-05</groupId>
-      <artifactId>parent-05</artifactId>
+      <artifactId>05-integration-tests-maven</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
-   <artifactId>app</artifactId>
+   <artifactId>app-05</artifactId>
    <build>
       <plugins>
          <plugin>
@@ -18,7 +18,6 @@
             <artifactId>maven-failsafe-plugin</artifactId>
          </plugin>
          <plugin>
-            <!--EXAMPLE 05-MAVEN-***-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
             <executions>

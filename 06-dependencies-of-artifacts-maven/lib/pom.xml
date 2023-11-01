@@ -2,7 +2,7 @@
    <modelVersion>4.0.0</modelVersion>
    <parent>
       <groupId>tk.hildebrandt.maven.example-06</groupId>
-      <artifactId>parent-06</artifactId>
+      <artifactId>06-dependencies-of-artifacts-maven</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
    <artifactId>lib-06</artifactId>

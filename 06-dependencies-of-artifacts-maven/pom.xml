@@ -1,8 +1,8 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
    <groupId>tk.hildebrandt.maven.example-06</groupId>
-   <artifactId>parent-06</artifactId>
-   <name>06-exclude-dependency-maven</name>
+   <artifactId>06-dependencies-of-artifacts-maven</artifactId>
+   <name>06-dependencies-of-artifacts-maven</name>
    <version>1-SNAPSHOT</version>
    <packaging>pom</packaging>
    <properties>
@@ -11,7 +11,7 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <argLine/>
       <argLineFailsafe/>
-      <spring-boot.version>3.0.6</spring-boot.version>
+      <spring-boot.version>3.1.5</spring-boot.version>
       <maven-failsafe-plugin.excludedGroups>slowtest</maven-failsafe-plugin.excludedGroups>
    </properties>
    <modules>
@@ -23,7 +23,7 @@
          <plugins>
             <plugin>
                <artifactId>maven-surefire-plugin</artifactId>
-               <version>3.1.0</version>
+               <version>3.2.1</version>
                <configuration>
                   <argLine>@{argLine} -Dfile.encoding=${project.build.sourceEncoding}</argLine>
                </configuration>
@@ -31,7 +31,7 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-failsafe-plugin</artifactId>
-               <version>3.1.0</version>
+               <version>3.2.1</version>
                <executions>
                   <execution>
                      <id>integration-tests</id>
@@ -59,7 +59,7 @@
          <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.9.2</version>
+            <version>5.10.0</version>
             <scope>test</scope>
          </dependency>
          <dependency>

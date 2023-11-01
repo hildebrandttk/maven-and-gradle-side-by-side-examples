@@ -20,7 +20,7 @@
       <dependency>
          <groupId>org.junit.jupiter</groupId>
          <artifactId>junit-jupiter</artifactId>
-         <version>5.9.2</version>
+         <version>5.10.0</version>
          <scope>test</scope>
       </dependency>
    </dependencies>
@@ -30,7 +30,7 @@
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.1.0</version>
+            <version>3.2.1</version>
             <configuration>
                <!--EXAMPLE 01-MAVEN-09-->
                <argLine>@{argLine} -Dfile.encoding=${project.build.sourceEncoding}</argLine>

@@ -1,7 +1,7 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
    <groupId>tk.hildebrandt.maven.example-02</groupId>
-   <artifactId>parent-02</artifactId>
+   <artifactId>02-multi-module-maven</artifactId>
    <name>02-multi-module-maven</name>
    <version>1-SNAPSHOT</version>
    <packaging>pom</packaging>

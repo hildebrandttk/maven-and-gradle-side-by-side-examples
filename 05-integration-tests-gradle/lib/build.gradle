@@ -1,8 +1,0 @@
-plugins {
-   id("java-library")
-}
-
-dependencies {
-   implementation("jakarta.persistence:jakarta.persistence-api:3.0.0")
-   testImplementation("org.junit.jupiter:junit-jupiter")
-}
