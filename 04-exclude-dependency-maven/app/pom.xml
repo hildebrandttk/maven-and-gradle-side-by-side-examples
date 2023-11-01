@@ -2,7 +2,7 @@
    <modelVersion>4.0.0</modelVersion>
    <parent>
       <groupId>tk.hildebrandt.maven.example-04</groupId>
-      <artifactId>parent-04</artifactId>
+      <artifactId>04-exclude-dependency-maven</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
    <artifactId>app-04</artifactId>
@@ -54,18 +54,18 @@
          <artifactId>spring-boot-starter-test</artifactId>
          <scope>test</scope>
          <!--EXAMPLE 04-MAVEN-01 Option 2: exclude transient dependency on all importing dependency(mvn version dependent)-->
-<!--         <exclusions>-->
-<!--            <exclusion>-->
-<!--               <groupId>org.springframework.boot</groupId>-->
-<!--               <artifactId>spring-boot-starter-logging</artifactId>-->
-<!--            </exclusion>-->
-<!--         </exclusions>-->
+         <exclusions>
+            <exclusion>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+         </exclusions>
       </dependency>
       <!--EXAMPLE 04-MAVEN-02 import replacement-->
-      <!--      <dependency>-->
-      <!--         <groupId>org.springframework.boot</groupId>-->
-      <!--         <artifactId>spring-boot-starter-log4j2</artifactId>-->
-      <!--      </dependency>-->
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-log4j2</artifactId>
+      </dependency>
       <dependency>
          <groupId>com.h2database</groupId>
          <artifactId>h2</artifactId>

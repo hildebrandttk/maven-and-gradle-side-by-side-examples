@@ -1,15 +1,15 @@
 <project>
    <modelVersion>4.0.0</modelVersion>
    <groupId>tk.hildebrandt.maven.example-03</groupId>
-   <artifactId>parent-03</artifactId>
-   <name>03-depenency-management-maven</name>
+    <artifactId>03-dependency-management-maven</artifactId>
+    <name>03-dependency-management-maven</name>
    <version>1-SNAPSHOT</version>
    <packaging>pom</packaging>
    <properties>
       <maven.compiler.source>17</maven.compiler.source>
       <maven.compiler.target>17</maven.compiler.target>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <spring-boot.version>3.0.6</spring-boot.version>
+       <spring-boot.version>3.1.5</spring-boot.version>
       <argLine/>
    </properties>
    <modules>
@@ -23,7 +23,7 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-plugin</artifactId>
-               <version>3.1.0</version>
+                <version>3.2.1</version>
                <configuration>
                   <argLine>@{argLine} -Dfile.encoding=${project.build.sourceEncoding}</argLine>
                </configuration>
@@ -43,7 +43,7 @@
          <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.9.2</version>
+             <version>5.10.0</version>
             <scope>test</scope>
          </dependency>
          <!--EXAMPLE 03-MAVEN-02-->

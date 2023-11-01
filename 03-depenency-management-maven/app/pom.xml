@@ -2,7 +2,7 @@
    <modelVersion>4.0.0</modelVersion>
    <parent>
       <groupId>tk.hildebrandt.maven.example-03</groupId>
-      <artifactId>parent-03</artifactId>
+      <artifactId>03-dependency-management-maven</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
    <artifactId>app-03</artifactId>

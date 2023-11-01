@@ -2,44 +2,44 @@ group = "tk.hildebrandt.gradle"
 version = "1-SNAPSHOT"
 
 subprojects {
-   apply(plugin: "java")
+    apply(plugin: "java")
 
-   repositories {
-      mavenLocal()
-      mavenCentral()
-   }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
 
-   tasks.withType(JavaCompile) {
-      options.encoding = "UTF-8"
-   }
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = "UTF-8"
+    }
 
-   tasks.withType(Javadoc) {
-      options.encoding = "UTF-8"
-   }
+    tasks.withType(Javadoc).configureEach {
+        options.encoding = "UTF-8"
+    }
 
-   tasks.withType(Test) {
-      systemProperty("file.encoding", "UTF-8")
-      useJUnitPlatform()
-   }
+    tasks.withType(Test).configureEach {
+        systemProperty("file.encoding", "UTF-8")
+        useJUnitPlatform()
+    }
 
-   java {
-      toolchain {
-         languageVersion.set(JavaLanguageVersion.of(17))
-      }
-   }
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
 
-   dependencies {
-      // EXAMPLE 03-GRADLE-01 BOM-Import
+    dependencies {
+        // EXAMPLE 03-GRADLE-01 BOM-Import
 //       implementation(platform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
 // Enforce import and overwrite other definitions
-       implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
+        implementation(enforcedPlatform("org.springframework.boot:spring-boot-dependencies:${springVersion}"))
 
-      // EXAMPLE 03-GRADLE-02 constraints
-      constraints {
+        // EXAMPLE 03-GRADLE-02 constraints
+        constraints {
 //         implementation("org.springframework.boot:spring-boot-starter-data-rest:${springVersion}")
 //         implementation("org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}")
 //         testImplementation("org.springframework.boot:spring-boot-starter-test:${springVersion}")
 //         implementation("org.junit.jupiter:junit-jupiter:5.9.1")
-      }
-   }
+        }
+    }
 }

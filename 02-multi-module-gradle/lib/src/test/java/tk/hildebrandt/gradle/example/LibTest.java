@@ -1,9 +1,8 @@
 package tk.hildebrandt.gradle.example;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import tk.hildebrandt.gradle.example.Lib;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LibTest {
 

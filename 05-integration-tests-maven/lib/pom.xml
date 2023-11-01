@@ -2,7 +2,7 @@
    <modelVersion>4.0.0</modelVersion>
    <parent>
       <groupId>tk.hildebrandt.maven.example-05</groupId>
-      <artifactId>parent-05</artifactId>
+       <artifactId>05-integration-tests-maven</artifactId>
       <version>1-SNAPSHOT</version>
    </parent>
    <artifactId>lib-05</artifactId>

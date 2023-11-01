@@ -1,4 +1,4 @@
-package tk.hildebrandt.gradle.example;
+package tk.hildebrandt.maven.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

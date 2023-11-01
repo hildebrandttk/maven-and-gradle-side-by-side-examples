@@ -1,4 +1,4 @@
-package tk.hildebrandt.gradle.example;
+package tk.hildebrandt.maven.example;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

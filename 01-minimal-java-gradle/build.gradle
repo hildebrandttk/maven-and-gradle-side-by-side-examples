@@ -1,13 +1,13 @@
 //EXAMPLE 01-GRADLE-***
 plugins {
-   id "java-library"
-   id "maven-publish"
+    id "java-library"
+    id "maven-publish"
 }
 
 //EXAMPLE 01-GRADLE-***
 repositories {
-   mavenLocal()
-   mavenCentral()
+    mavenLocal()
+    mavenCentral()
 }
 //EXAMPLE 01-GRADLE-02
 group = "tk.hildebrandt.gradle"
@@ -16,17 +16,17 @@ version = "1-SNAPSHOT"
 
 //EXAMPLE 01-GRADLE-***
 publishing {
-   publications {
-      maven(MavenPublication) {
-         from(components.java)
-      }
-   }
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
 }
 java {
-   //EXAMPLE 01-GRADLE-05
-   toolchain {
-      languageVersion.set(JavaLanguageVersion.of(17))
-   }
+    //EXAMPLE 01-GRADLE-05
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
 
 //Alternativ
@@ -41,17 +41,17 @@ tasks.withType(JavaCompile).configureEach {
 //javadoc.options.encoding = "UTF-8"
 //EXAMPLE 01-GRADLE-06
 tasks.withType(Javadoc).configureEach {
-   options.encoding = "UTF-8"
+    options.encoding = "UTF-8"
 }
 
 //EXAMPLE 01-GRADLE-07
 dependencies {
-   testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
 }
 
 tasks.withType(Test).configureEach {
-   //EXAMPLE 01-GRADLE-09
-   systemProperty "file.encoding", "UTF-8"
-   //EXAMPLE 01-GRADLE-***
-   useJUnitPlatform()
+    //EXAMPLE 01-GRADLE-09
+    systemProperty "file.encoding", "UTF-8"
+    //EXAMPLE 01-GRADLE-***
+    useJUnitPlatform()
 }

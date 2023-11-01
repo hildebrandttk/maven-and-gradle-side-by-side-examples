@@ -1,4 +1,4 @@
-package tk.hildebrandt.gradle.example;
+package tk.hildebrandt.maven.example;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
